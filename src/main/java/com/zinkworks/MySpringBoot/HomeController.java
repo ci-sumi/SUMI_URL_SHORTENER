@@ -12,4 +12,8 @@ public class HomeController {
     public String index(){
         return "home.html";
     }
+    @GetMapping("/about")
+    public String about(){
+        return "about.html";
+    }
 }
