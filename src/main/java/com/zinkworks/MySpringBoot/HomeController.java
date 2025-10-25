@@ -3,8 +3,11 @@ package com.zinkworks.MySpringBoot;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+
+//@Controller class handles HTTP requests and return webpages(views)
 @Controller
 public class HomeController {
+    //@GetMapping ->HTTP Get requests for root Urls
     @GetMapping("/")
     public String index(){
         return "home.html";
