@@ -1,6 +1,7 @@
 package com.zinkworks.MySpringBoot;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
@@ -9,7 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
     //@GetMapping ->HTTP Get requests for root Urls
     @GetMapping("/")
-    public String index(){
+    public String index(Model model){
+        model.addAttribute("title","MY-URLSHORTENER");
         return "home.html";
     }
     @GetMapping("/about")
